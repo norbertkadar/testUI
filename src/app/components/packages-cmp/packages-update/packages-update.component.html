@@ -1,0 +1,76 @@
+
+<form name="add_client_form" class="offset-2 col-md-8">
+  <div class="row">
+    <div class="col">
+      <div class="form-group">
+        <label for="countryOrigin">Country Origin</label>
+        <input [(ngModel)]="myPackage.countryOrigin" name="countryOrigin" type="text" class="form-control" id="countryOrigin"
+               placeholder="countryOrigin" required>
+      </div>
+    </div>
+
+
+    <div class="col">
+      <div class="form-group">
+        <label for="expeditor">Expeditor</label>
+        <input [(ngModel)]="myPackage.expeditor" name="expeditor" type="text" class="form-control" id="expeditor"
+               placeholder="expeditor" required>
+      </div>
+    </div>
+  </div>
+
+  <div class="row">
+    <div class="col">
+      <div class="form-group">
+        <label for="destinationCountry">Destination Country</label>
+        <input [(ngModel)]="myPackage.destinationCountry" type="text" name="destinationCountry" class="form-control" id="destinationCountry"
+               placeholder="destinationCountry" required>
+      </div>
+    </div>
+  </div>
+
+  <div class="row">
+    <div class="col">
+      <div class="form-group">
+        <label for="destinatar">Destinatar</label>
+        <input [(ngModel)]="myPackage.destinatar" type="text" name="destinatar" class="form-control" id="destinatar"
+               placeholder="destinatar" required>
+      </div>
+    </div>
+  </div>
+
+  <div class="row">
+    <div class="col">
+      <div class="form-group">
+        <label for="cost">Cost</label>
+        <input [(ngModel)]="myPackage.cost" type="text" name="cost" class="form-control" id="cost"
+               placeholder="cost" required>
+      </div>
+    </div>
+  </div>
+
+  <div class="row">
+    <div class="col">
+      <div class="form-group">
+        <label for="cost">Tracking Code</label>
+        <input [(ngModel)]="myPackage.trackingCode" type="text" name="trackingCode" class="form-control" id="trackingCode"
+               placeholder="trackingCode" required>
+      </div>
+    </div>
+  </div>
+
+
+  <div class="row">
+    <div class="col text-center">
+      <button type="submit" class="btn btn-success mr-5" (click)="save()">Save</button>
+      <button type="reset" class="btn btn-info mr-5" (click)="goBack()">Back</button>
+    </div>
+  </div>
+</form>
+
+
+
+
+
+
+

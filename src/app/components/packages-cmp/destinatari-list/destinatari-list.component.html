@@ -1,0 +1,26 @@
+
+<div class="m-md-5"></div>
+<div class="m-md-5"></div>
+<table class="table offset-md-1 col-md-10">
+  <thead class="thead-dark">
+  <tr>
+    <th scope="col"></th>
+    <th scope="col"> Destinatar</th>
+    <th scope="col"> Cost</th>
+    <th scope="col"> </th>
+  </tr>
+  </thead>
+
+  <tbody>
+  <tr *ngFor="let pack of destinatariData">
+    <th scope="row">
+      <i class="far fa-check-square"></i>
+    </th>
+    <td>{{pack.destinatar}}</td>
+    <td>{{pack.cost}}</td>
+  </tr>
+
+  </tbody>
+
+</table>
+

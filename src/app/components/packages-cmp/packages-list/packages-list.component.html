@@ -1,0 +1,48 @@
+<div class="offset-md-1 col-md-3 searchBar">
+  <div class="input-group">
+    <input class="form-control" [(ngModel)]="filter" placeholder="Search clients"/>
+    <div class="input-group-append">
+      <span class="input-group-text"><i class="fas fa-search" (click)="getPackages()"></i></span>
+    </div>
+  </div>
+</div>
+
+<table class="table offset-md-1 col-md-10">
+  <thead class="thead-dark">
+  <tr>
+    <th scope="col"></th>
+    <th scope="col"> ID</th>
+    <th scope="col"> Origin Country </th>
+    <th scope="col"> Expeditor</th>
+    <th scope="col"> Destination Country</th>
+    <th scope="col"> Destinatar</th>
+    <th scope="col"> Cost</th>
+    <th scope="col"> Tracking Code</th>
+    <th scope="col"> </th>
+  </tr>
+  </thead>
+
+  <tbody>
+  <tr *ngFor="let pack of packagesData">
+    <th scope="row">
+     <i class="far fa-check-square"></i>
+    </th>
+    <td>{{pack.id}}</td>
+    <td>{{pack.countryOrigin}}</td>
+    <td (click)="grupByExpeditor(pack.expeditor)" style="cursor:pointer">
+      <i class="far fa-user-circle"></i>
+      {{pack.expeditor}}</td>
+    <td>{{pack.destinationCountry}}</td>
+    <td>{{pack.destinatar}}</td>
+    <td>{{pack.cost}}</td>
+    <td>{{pack.trackingCode}}</td>
+    <td>
+      <button class="btn btn-danger mr-2" (click)="removePackage(pack.id)">Delete</button>
+      <button class="btn btn-info mr-2" (click)="updatePackage(pack.id)">Update</button>
+    </td>
+  </tr>
+
+  </tbody>
+
+</table>
+

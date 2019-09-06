@@ -1,0 +1,32 @@
+<div class="container">
+  <div class="row user-list">
+    <table class="table offset-md-1 col-md-10">
+      <thead class="thead-dark">
+      <tr>
+        <th scope="col"></th>
+        <th scope="col">Id</th>
+        <th scope="col">FirstName</th>
+        <th scope="col">LastName</th>
+        <th scope="col">Username</th>
+        <th scope="col">Email</th>
+        <th scope="col">Role</th>
+      </tr>
+      </thead>
+      <tbody>
+      <tr *ngFor="let user of usersData">
+        <th scope="row">
+          <i class="fas fa-user"></i>
+        </th>
+        <td>{{user.id}} </td>
+        <td>{{user.firstName}} </td>
+        <td>{{user.lastName}} </td>
+        <td>{{user.username}} </td>
+        <td>{{user.email}} </td>
+        <td>{{user.role}} </td>
+        <!--<td>{{user.dateRegistered | date}}  </td>-->
+      </tr>
+      </tbody>
+    </table>
+  </div>
+</div>
+
